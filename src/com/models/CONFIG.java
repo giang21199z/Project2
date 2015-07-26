@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class CONFIG {
     public static final String FilePhanBoXacSuatChuyenTrangThai = "PhanBoXacSuatChuyenTrangThai.txt";
-    public static final int NumberOfLabel = 3;
+    public static final int NumberOfLabel = 4;
     public static final String FilePhanBoXacSuatTuVsNhan = "PhanBoXacSuatTuVsNhan.txt";
     public static final ArrayList<String> ListLabel = myLibFuntion.loadLabel("DanhSachNhan.txt");
 }

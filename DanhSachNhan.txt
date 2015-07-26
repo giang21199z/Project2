@@ -1,3 +1,4 @@
-#
 Noun
 Verb
+Det
+Prep

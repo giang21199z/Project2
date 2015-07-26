@@ -24,16 +24,19 @@ public class MyViterbiAlgorithm {
     }
 
     public void mainProcessor() {
-        //q0 là xác suất cho nhãn start = 0;
+        //q0 : xác suất cho nhãn start = 0;
+        //word: tập các từ trong câu
+        //v: ma trận viterbi có 2 chiều [word.length][NumberLabel]
         double q0 = 1.0;
         //tính toán xác suất cho từ đầu tiên
-        String sentences = "I play football";
+        String sentences = "time flies like an arrow";
         //tách từng từ ra
         String word[] = sentences.split(" ");
 
         for (String w : word) {
             System.out.println(w);
         }
+        
         Double v[][] = new Double[word.length][CONFIG.NumberOfLabel];
         for (int i = 0; i < v.length; i++) {
             for (int j = 0; j < v[0].length; j++) {
@@ -59,7 +62,9 @@ public class MyViterbiAlgorithm {
             }
         }
 
+        //ma tran viterbi sau khi tính toán xong
         myLibFuntion.printAMatrix(v);
+        //Xác định nhãn cho từ loại
         for (int row = 0; row < v.length; row++) {
             double max = myLibFuntion.getMaxDouble(v[row]);
             for (int col = 0; col < v[0].length; col++) {
